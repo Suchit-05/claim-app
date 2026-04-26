@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Insurance Claim</title>
+    <title>Insurance Claim Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <h2>Insurance Claim Form</h2>
+    <h2>Insurance Claim Portal</h2>
 
     <input type="text" id="name" placeholder="Enter Name">
-    <input type="text" id="policy" placeholder="Policy Number">
+    <input type="text" id="policy" placeholder="Policy Number (POL123)">
     <input type="number" id="amount" placeholder="Claim Amount">
 
-    <button onclick="submitClaim()">Submit</button>
+    <button id="submitBtn" onclick="submitClaim()">Submit Claim</button>
+    <button onclick="clearForm()">Clear</button>
 
     <p id="message"></p>
+
+    <h3>Claim History</h3>
+    <table id="historyTable">
+        <tr>
+            <th>Name</th>
+            <th>Policy</th>
+            <th>Amount</th>
+            <th>Status</th>
+        </tr>
+    </table>
 </div>
 
 <script src="script.js"></script>
