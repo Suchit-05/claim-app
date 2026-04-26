@@ -9,12 +9,17 @@
 <div class="container">
     <h2>Insurance Claim Portal</h2>
 
-    <input type="text" id="name" placeholder="Enter Name">
-    <input type="text" id="policy" placeholder="Policy Number (POL123)">
-    <input type="number" id="amount" placeholder="Claim Amount">
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter Name" required>
+
+    <label for="policy">Policy Number:</label>
+    <input type="text" id="policy" placeholder="POL123" required>
+
+    <label for="amount">Claim Amount:</label>
+    <input type="number" id="amount" placeholder="Enter Amount" required>
 
     <button id="submitBtn" onclick="submitClaim()">Submit Claim</button>
-    <button onclick="clearForm()">Clear</button>
+    <button id="clearBtn" onclick="clearForm()">Clear</button>
 
     <p id="message"></p>
 
